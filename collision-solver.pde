@@ -27,7 +27,6 @@ boolean active = true;
 boolean showKinetic = false;
 
 void setup() {
-  //size(800, 800);
   fullScreen(P2D);
   colorMode(HSB);
   textAlign(LEFT, TOP);
@@ -49,9 +48,6 @@ void setup() {
     PVector pos = new PVector(random(radius, width-radius), random(radius, height-radius));
     PVector vel = PVector.random2D().mult(scaledSpeed);
     color particleColor = color(random(255), random(128, 255), random(128, 255));
-    
-    //float theta = atan2(pos.x - width/2, pos.y - height/2) + PI;
-    //color particleColor = color(theta * 255 / TAU, random(128,255), random(128,255));
     
     particles[i] = new Particle(pos, vel, particleColor);
   }
